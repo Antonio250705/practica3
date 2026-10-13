@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Antonio Javier García Corro">
+    <title>Tu Cuenta - Davante Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <strong>D</strong> <p>Davante Academy</p>
+        </div>
+        <nav>
+            <a href="cursos.html">CURSOS</a>
+            <a href="contacto.html">CONTÁCTANOS</a>
+            <a href="cuenta.html">TU CUENTA</a> 
+        </nav>
+        <a href="cursos.html" class="boton">Explorar cursos</a>
+    </header>
+
+    <main>
+        <section class="perfil-cabecera principal">
+            <div>
+                <span class="etiqueta">Tu cuenta</span>
+                <h1>Tu perfil</h1>
+                <p>Revisa tus datos, cursos activos y cuotas desde un espacio claro y ordenado.</p>
+            </div>
+            <div class="tarjeta-usuario">
+                <img src="./img/cuenta.png" alt="Foto de perfil">
+                <p><strong>Tu espacio personal</strong></p>
+                <p>Consulta tus datos y gestiona tu formación desde un único lugar.</p>
+                <a href="#" class="boton-secundario">Editar foto</a>
+            </div>
+        </section>
+
+        <section class="perfil-datos">
+            <h2>Datos de perfil</h2>
+            <form class="formulario-perfil">
+                <div class="campo-form">
+                    <label>Correo electrónico</label>
+                    <input type="email" value="ejemplo@gmail.com" readonly>
+                </div>
+                <div class="campo-form">
+                    <label>Cursos activos</label>
+                    <input type="text" value="Curso TIC" readonly>
+                </div>
+                <div class="campo-form">
+                    <label>Cuotas activas</label>
+                    <input type="text" value="0" readonly>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Mismo footer que en el index -->
+        <div class="footer-superior">
+            <div class="footer-info">
+                <strong>D</strong> <span>Davante Academy</span>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2026 Davante Academy. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
