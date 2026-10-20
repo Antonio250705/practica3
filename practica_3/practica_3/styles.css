@@ -1,0 +1,508 @@
+/* =========================================
+   1. ESTILOS GLOBALES Y VARIABLES
+   ========================================= */
+:root {
+    --color-texto: #1a1a1a;
+    --color-texto-suave: #666666;
+    --color-oscuro: #111111; /* Para botones y fondos oscuros */
+    --color-fondo: #ffffff;
+    --color-gris-claro: #f4f4f5;
+    --color-bordes: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Contenedor principal para centrar el contenido */
+header, main, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   2. BOTONES Y ETIQUETAS (Componentes)
+   ========================================= */
+.boton {
+    background-color: var(--color-oscuro);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    border: 2px solid var(--color-oscuro);
+}
+
+.boton-secundario {
+    background-color: transparent;
+    color: var(--color-texto);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    border: 2px solid var(--color-bordes);
+}
+
+.etiqueta {
+    background-color: var(--color-oscuro);
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   3. CABECERA (Header) - USO DE FLEXBOX
+   ========================================= */
+header {
+    display: flex;
+    justify-content: space-between; /* Separa logo, menú y botón */
+    align-items: center; /* Centra verticalmente */
+    height: 80px;
+    border-bottom: 1px solid var(--color-bordes);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.logo strong {
+    background-color: var(--color-oscuro);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+nav {
+    display: flex;
+    gap: 30px; /* Separación entre los enlaces del menú */
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* =========================================
+   4. SECCIÓN PRINCIPAL (Hero)
+   ========================================= */
+.principal {
+    display: flex; /* Flexbox para poner texto e imagen lado a lado */
+    align-items: center;
+    gap: 50px;
+    padding: 80px 0;
+}
+
+.principal > div:first-child {
+    flex: 1; /* El texto ocupa la mitad */
+}
+
+.principal-imagen {
+    flex: 1; /* La imagen ocupa la otra mitad */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.principal-imagen img {
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.principal h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.principal p {
+    color: var(--color-texto-suave);
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.principal-botones {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+/* Estadísticas debajo de los botones */
+.estadisticas {
+    display: flex;
+    gap: 40px;
+}
+
+.dato {
+    display: flex;
+    flex-direction: column;
+}
+
+.dato strong {
+    font-size: 24px;
+}
+
+.dato span {
+    font-size: 14px;
+    color: var(--color-texto-suave);
+}
+
+/* =========================================
+   5. CURSOS DESTACADOS
+   ========================================= */
+.cursos-destacados {
+    padding: 60px 0;
+}
+
+.cursos-destacados h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.cursos-destacados > p {
+    color: var(--color-texto-suave);
+    margin-bottom: 40px;
+}
+
+.contenedor-cursos {
+    display: flex; /* Flexbox para las 3 tarjetas */
+    gap: 30px;
+}
+
+.tarjeta-curso {
+    flex: 1; /* Las tarjetas ocupan el mismo ancho */
+    border: 1px solid var(--color-bordes);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tarjeta-curso img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.tarjeta-curso h3 {
+    font-size: 20px;
+}
+
+.tarjeta-curso p {
+    font-size: 14px;
+    color: var(--color-texto-suave);
+}
+
+/* =========================================
+   6. BANNER OSCURO Y MAPA
+   ========================================= */
+.banner-oscuro {
+    background-color: var(--color-oscuro);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 50px;
+    display: flex; /* Flexbox para alinear texto y mapa */
+    align-items: center;
+    gap: 40px;
+    margin: 60px auto;
+    max-width: 1160px;
+}
+
+.banner-texto {
+    flex: 1;
+}
+
+.banner-texto h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.banner-texto p {
+    color: #a3a3a3;
+    margin-bottom: 30px;
+}
+
+.banner-enlaces {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.etiqueta-oscura {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.enlace-simple {
+    font-size: 14px;
+    color: #a3a3a3;
+    text-decoration: underline;
+}
+
+.banner-mapa {
+    flex: 1;
+}
+
+.banner-mapa img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* =========================================
+   7. PIE DE PÁGINA (Footer)
+   ========================================= */
+footer {
+    background-color: var(--color-gris-claro);
+    padding: 60px 20px 20px 20px;
+    border-top: 3px solid black; /* ¡Esta es la línea corregida! */
+    margin-top: 60px;
+}
+.footer-superior {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.footer-info {
+    max-width: 300px;
+}
+
+.footer-info p {
+    color: var(--color-texto-suave);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.footer-legal strong {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.enlaces-legales {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.enlaces-legales a {
+    color: var(--color-texto-suave);
+    font-size: 14px;
+}
+
+.footer-inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-bordes);
+    color: var(--color-texto-suave);
+    font-size: 14px;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 15px;
+}
+
+/* =========================================
+   8. FORMULARIOS (Contacto y Cuenta)
+   ========================================= */
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campo-form label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.campo-form input,
+.campo-form textarea {
+    padding: 12px 15px;
+    border: 1px solid var(--color-bordes);
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    background-color: var(--color-fondo);
+    outline: none;
+}
+
+/* Flexbox para poner Nombre y Apellidos en la misma línea */
+.form-fila {
+    display: flex;
+    gap: 20px;
+}
+
+.form-fila .campo-form {
+    flex: 1; /* Ocupan exactamente la mitad cada uno */
+}
+
+.boton-enviar {
+    width: 100%; /* Hace que el botón de enviar ocupe todo el ancho */
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* =========================================
+   9. PÁGINA DE CUENTA (Tarjeta de usuario)
+   ========================================= */
+.tarjeta-usuario {
+    background-color: var(--color-gris-claro);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid var(--color-bordes);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.tarjeta-usuario img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; 
+    object-fit: cover;
+    background-color: #ddd; 
+}
+
+/* =========================================
+   10. PÁGINA DE CONTACTO Y CURSO
+   ========================================= */
+.contacto-contenedor {
+    align-items: flex-start; /* Alinea los elementos arriba */
+}
+
+.contacto-formulario {
+    flex: 1;
+}
+
+.contacto-info {
+    flex: 0.8; /* Hace que la tarjeta de la derecha sea un poco más estrecha */
+}
+
+.curso-info {
+    padding: 60px 0;
+}
+
+.curso-info h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+/* =========================================
+   11. CATÁLOGO DE CURSOS (Tarjetas horizontales)
+   ========================================= */
+.curso-tarjeta-horizontal {
+    display: flex;             /* Obligatorio de Flexbox para poner texto e imagen lado a lado */
+    align-items: center;       /* Centra verticalmente el contenido */
+    gap: 50px;                 /* Espacio entre el texto y la imagen */
+    border: 1px solid var(--color-bordes);
+    border-radius: 20px;       /* Bordes redondeados de la tarjeta */
+    padding: 40px;             /* Espacio interior de la tarjeta */
+    margin-bottom: 40px;       /* Separación entre un curso y otro */
+}
+
+.curso-contenido {
+    flex: 1;                   /* El texto ocupa la mitad de la tarjeta */
+}
+
+.curso-contenido h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.curso-contenido p {
+    color: var(--color-texto-suave);
+    margin-bottom: 30px;
+}
+
+.curso-imagen {
+    flex: 1;                   /* La imagen ocupa la otra mitad */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.curso-imagen img {
+    max-width: 100%;
+    border-radius: 15px;       /* Bordes redondeados de la foto */
+    object-fit: cover;
+}
+/* =========================================
+   12. PÁGINA INDIVIDUAL DE CURSO (Tarjetas)
+   ========================================= */
+.cuadricula-4 {
+    display: flex; /* Esto pone las 4 tarjetas en una fila */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.tarjeta-info {
+    flex: 1; /* Hace que las 4 tarjetas midan exactamente lo mismo */
+    background-color: #ffffff;
+    border: 1px solid var(--color-bordes);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02); /* Una sombra muy suave */
+}
+
+/* Alineamos el icono y el título en horizontal */
+.tarjeta-cabecera {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+/* El cuadradito gris del icono */
+.icono {
+    background-color: var(--color-gris-claro);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--color-texto);
+}
+
+.tarjeta-info h4 {
+    font-size: 15px;
+    margin: 0;
+}
+
+.tarjeta-info p {
+    font-size: 14px;
+    color: var(--color-texto-suave);
+    line-height: 1.6;
+}

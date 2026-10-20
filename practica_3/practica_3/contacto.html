@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Antonio Javier García Corro">
+    <title>Contacto - Davante Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <strong>D</strong> <p>Davante Academy</p>
+        </div>
+        <nav>
+            <a href="cursos.html">CURSOS</a>
+            <a href="contacto.html">CONTÁCTANOS</a>
+            <a href="cuenta.html">TU CUENTA</a> 
+        </nav>
+        <a href="cursos.html" class="boton">Explorar cursos</a>
+    </header>
+
+    <main>
+        <section class="contacto-contenedor principal">
+            
+            <div class="contacto-formulario">
+                <span class="etiqueta">Contacto</span>
+                <h1>CONTACTA</h1>
+                <p>Rellena con tus datos personales y te responderemos lo antes posible.</p>
+                
+                <form action="#" method="POST" class="form-contacto">
+                    <div class="form-fila">
+                        <div class="campo-form">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Álvaro" required>
+                        </div>
+                        <div class="campo-form">
+                            <label for="apellidos">Apellidos</label>
+                            <input type="text" id="apellidos" name="apellidos" placeholder="Pérez" required>
+                        </div>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@gmail.com" required>
+                    </div>
+                    
+                    <div class="campo-form">
+                        <label for="mensaje">Deja un mensaje</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Deja tu mensaje o preguntas" rows="4" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="boton boton-enviar">Enviar</button>
+                </form>
+            </div>
+
+            <div class="contacto-info tarjeta-curso">
+                <img src="./img/contacta.png" alt="Asesora de Davante Academy">
+                <h3>Estamos aquí para ayudarte</h3>
+                <p>Habla con nuestro equipo y resuelve tus dudas sobre cursos, horarios y matrícula.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <!-- Mismo footer que en el index -->
+        <div class="footer-superior">
+            <div class="footer-info">
+                <strong>D</strong> <span>Davante Academy</span>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>© 2026 Davante Academy. Todos los derechos reservados.</p>
+        </div>
+         <p xmlns:cc="http://creativecommons.org/ns#" >Esta obra de <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Antonio250705">Antonio Javier García Corro</a> está bajo una <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Licencia Creative Commons Atribución-NoComercial 4.0 Internacional</a>.</p>
+    </footer>
+</body>
+</html>
