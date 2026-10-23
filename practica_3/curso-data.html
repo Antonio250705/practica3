@@ -8,17 +8,34 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo"><strong>D</strong> <p>Davante Academy</p></div>
-        <nav>
-            <a href="cursos.html">CURSOS</a>
-            <a href="contacto.html">CONTÁCTANOS</a>
-            <a href="cuenta.html">TU CUENTA</a> 
-        </nav>
-        <a href="cursos.html" class="boton">Explorar cursos</a>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-4">
+        <div class="container">
+            <!-- Aumentamos el logo a fs-2 y el texto a fs-4 -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <strong class="me-2 fs-2">D</strong> <span class="mb-0 fs-4 fw-bold">Davante Academy</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <!-- Ampliamos la separación y el tamaño de letra (fs-5) -->
+                <ul class="navbar-nav ms-auto align-items-center gap-4">
+                    <li class="nav-item"><a class="nav-link fs-5 fw-semibold" href="cursos.html">CURSOS</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 fw-semibold" href="contacto.html">CONTÁCTANOS</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 fw-semibold" href="cuenta.html">TU CUENTA</a></li>
+                    
+                    <!-- Botones en tamaño grande con btn-lg -->
+                    <li class="nav-item ms-lg-4"><a class="btn btn-outline-dark btn-lg px-4 fw-semibold" href="login.html">Iniciar Sesión</a></li>
+                    <li class="nav-item"><a class="btn btn-dark btn-lg px-4 fw-semibold" href="registro.html">Regístrate</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </nav>
 
     <main>
         <section class="curso-header" style="padding: 60px 0;">
