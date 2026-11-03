@@ -506,3 +506,30 @@ footer {
     color: var(--color-texto-suave);
     line-height: 1.6;
 }
+
+/* Ejemplo 1: Reestructuración de la sección principal en móviles */
+@media (max-width: 768px) {
+    .principal {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    .principal-imagen video {
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+}
+
+/* Ejemplo 2: Adaptación y despliegue del menú de navegación (Navbar) */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #ffffff;
+        padding: 1.5rem;
+        border-bottom: 1px solid #dee2e6;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+    .navbar-nav {
+        gap: 0.5rem !important;
+        align-items: flex-start !important;
+    }
+}

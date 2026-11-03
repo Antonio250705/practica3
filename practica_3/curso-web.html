@@ -32,6 +32,14 @@
                     <!-- Botones en tamaño grande con btn-lg -->
                     <li class="nav-item ms-lg-4"><a class="btn btn-outline-dark btn-lg px-4 fw-semibold" href="login.html">Iniciar Sesión</a></li>
                     <li class="nav-item"><a class="btn btn-dark btn-lg px-4 fw-semibold" href="registro.html">Regístrate</a></li>
+                    <li class="nav-item ms-2">
+                        <button type="button" class="btn btn-outline-dark position-relative p-2" data-bs-toggle="modal" data-bs-target="#modalCompra" title="Ver carrito">
+                            🛒
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                                3
+                            </span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -152,10 +160,7 @@
                 <h2>¿Estás listo para empezar?</h2>
                 <p>Accede al curso completo, al proyecto final y a todo el soporte que necesitas para convertirte en un desarrollador web con perfil profesional.</p>
             </div>
-            <div class="banner-botones">
-                <a href="#" class="boton-secundario-blanco">Ver detalles</a>
-                <a href="#" class="boton-blanco">Comprar curso</a>
-            </div>
+            
         </section>
     </main>
 
@@ -179,5 +184,26 @@
         </div>
          <p xmlns:cc="http://creativecommons.org/ns#" >Esta obra de <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Antonio250705">Antonio Javier García Corro</a> está bajo una <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Licencia Creative Commons Atribución-NoComercial 4.0 Internacional</a>.</p>
     </footer>
+    <div class="modal fade" id="modalCompra" tabindex="-1" aria-labelledby="modalCompraLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title fw-bold" id="modalCompraLabel">🛒 Carrito - Davante Academy</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <div class="mb-3">
+                        <span class="fs-1">🎉</span>
+                    </div>
+                    <h4 class="fw-bold mb-3">¡Curso añadido con éxito!</h4>
+                    <p class="text-muted">El curso se ha incorporado correctamente a tu carrito de compra. Estás a un paso de impulsar tu futuro tecnológico en Córdoba.</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-outline-dark px-4" data-bs-dismiss="modal">Seguir explorando</button>
+                    <button type="button" class="btn btn-dark px-4" data-bs-dismiss="modal">Tramitar compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

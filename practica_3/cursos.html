@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- CABECERA -->
-   <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-4">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-4">
         <div class="container">
             <!-- Aumentamos el logo a fs-2 y el texto a fs-4 -->
             <a class="navbar-brand d-flex align-items-center" href="index.html">
@@ -32,10 +32,19 @@
                     <!-- Botones en tamaño grande con btn-lg -->
                     <li class="nav-item ms-lg-4"><a class="btn btn-outline-dark btn-lg px-4 fw-semibold" href="login.html">Iniciar Sesión</a></li>
                     <li class="nav-item"><a class="btn btn-dark btn-lg px-4 fw-semibold" href="registro.html">Regístrate</a></li>
+                    
+                    <!-- Icono del Carrito con su contador dinámico -->
+                    <li class="nav-item ms-2">
+                        <button type="button" class="btn btn-outline-dark position-relative p-2" data-bs-toggle="modal" data-bs-target="#modalCompra" title="Ver carrito">
+                            🛒
+                            <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                                0
+                            </span>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
-    </nav>
     </nav>
 
     <main>
@@ -55,10 +64,13 @@
                         <div class="dato"><strong>255€</strong><span>Precio</span></div>
                     </div>
                     
-                    <a href="curso-web.html" class="boton" style="margin-top: 30px;">Explorar curso</a>
+                    <!-- Contenedor para alinear los botones -->
+                    <div class="d-flex align-items-center gap-3" style="margin-top: 30px;">
+                        <a href="curso-web.html" class="boton m-0">Explorar curso</a>
+                        <button type="button" class="btn btn-dark px-4 py-2 fw-semibold" onclick="agregarAlCarrito('Desarrollo Web', 255)" style="border-radius: 6px;">Comprar</button>
+                    </div>
                 </div>
                 <div class="curso-imagen">
-                    <!-- Recuerda exportar esta imagen de Figma y poner aquí su nombre -->
                     <img src="./img/desarrollo-web.png" alt="Curso Desarrollo Web">
                 </div>
             </article>
@@ -76,7 +88,11 @@
                         <div class="dato"><strong>214€</strong><span>Precio</span></div>
                     </div>
                     
-                    <a href="./curso-data.html" class="boton" style="margin-top: 30px;">Explorar curso</a>
+                    <!-- Contenedor para alinear los botones -->
+                    <div class="d-flex align-items-center gap-3" style="margin-top: 30px;">
+                        <a href="./curso-data.html" class="boton m-0">Explorar curso</a>
+                        <button type="button" class="btn btn-dark px-4 py-2 fw-semibold" onclick="agregarAlCarrito('Data & análisis', 214)" style="border-radius: 6px;">Comprar</button>
+                    </div>
                 </div>
                 <div class="curso-imagen">
                     <img src="./img/dataYanalisis.png" alt="Curso Data y Análisis">
@@ -96,7 +112,11 @@
                         <div class="dato"><strong>199€</strong><span>Precio</span></div>
                     </div>
                     
-                    <a href="./curso-diseño.html" class="boton" style="margin-top: 30px;">Explorar curso</a>
+                    <!-- Contenedor para alinear los botones -->
+                    <div class="d-flex align-items-center gap-3" style="margin-top: 30px;">
+                        <a href="./curso-diseño.html" class="boton m-0">Explorar curso</a>
+                        <button type="button" class="btn btn-dark px-4 py-2 fw-semibold" onclick="agregarAlCarrito('Diseño digital', 199)" style="border-radius: 6px;">Comprar</button>
+                    </div>
                 </div>
                 <div class="curso-imagen">
                     <img src="./img/diseño_digital.png" alt="Curso Diseño Digital">
@@ -126,5 +146,39 @@
         </div>
          <p xmlns:cc="http://creativecommons.org/ns#" >Esta obra de <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Antonio250705">Antonio Javier García Corro</a> está bajo una <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Licencia Creative Commons Atribución-NoComercial 4.0 Internacional</a>.</p>
     </footer>
+
+    <!-- MODAL DE BOOTSTRAP PARA EL CARRITO DINÁMICO -->
+    <div class="modal fade" id="modalCompra" tabindex="-1" aria-labelledby="modalCompraLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-dark text-white py-3">
+                    <h5 class="modal-title fw-bold d-flex align-items-center gap-2" id="modalCompraLabel">
+                        🛒 Carrito de Compras - Davante Academy
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <!-- Lista donde JavaScript inyectará los cursos seleccionados -->
+                    <div id="lista-carrito" class="d-flex flex-column gap-3 mb-4">
+                        <!-- Contenido dinámico -->
+                    </div>
+
+                    <!-- Resumen del Pago -->
+                    <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                        <span class="fs-5 fw-bold text-dark">Total a pagar:</span>
+                        <span id="total-carrito" class="fs-4 fw-bold text-success">0€</span>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between bg-light py-3">
+                    <button type="button" class="btn btn-outline-secondary fw-semibold" data-bs-dismiss="modal">Seguir explorando</button>
+                    <button type="button" id="btn-tramitar" class="btn btn-dark px-4 fw-semibold" onclick="alert('¡Gracias por tu compra! En breve recibirás los datos de acceso a Davante Academy.')" disabled>Tramitar compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="carrito.js"></script>
 </body>
 </html>
