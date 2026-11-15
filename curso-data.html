@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Antonio Javier García Corro">
+    <title>Data y Análisis - Davante Academy</title>
+    <!-- Enlace a Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS personalizado debajo para que mande sobre Bootstrap en el main -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon.ico">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom py-4">
+        <div class="container">
+            <!-- Aumentamos el logo a fs-2 y el texto a fs-4 -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <strong class="me-2 fs-2">D</strong> <span class="mb-0 fs-4 fw-bold">Davante Academy</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <!-- Ampliamos la separación y el tamaño de letra (fs-5) -->
+                <ul class="navbar-nav ms-auto align-items-center gap-4">
+                    <li class="nav-item"><a class="nav-link fs-5 fw-semibold" href="cursos.html">CURSOS</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 fw-semibold" href="tienda.html">NOVEDADES</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 fw-semibold" href="contacto.html">CONTÁCTANOS</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5 fw-semibold" href="cuenta.html">CUENTA</a></li>
+                    
+                    <!-- Botones en tamaño grande con btn-lg -->
+                    <li class="nav-item ms-lg-4"><a class="btn btn-outline-dark btn-lg px-4 fw-semibold" href="login.html">Iniciar Sesión</a></li>
+                    <li class="nav-item"><a class="btn btn-dark btn-lg px-4 fw-semibold" href="registro.html">Regístrate</a></li>
+                    
+                    <!-- Icono del Carrito con su contador dinámico -->
+                    <li class="nav-item ms-2">
+                        <button type="button" class="btn btn-outline-dark position-relative p-2" data-bs-toggle="modal" data-bs-target="#modalCompra" title="Ver carrito">
+                            🛒
+                            <span id="contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">
+                                0
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="curso-header" style="padding: 60px 0;">
+            <h1 style="font-size: 48px; margin-bottom: 20px;">Data & análisis</h1>
+            <p style="color: #666; max-width: 800px;">Transforma información compleja en decisiones estratégicas. Domina el uso de Python, bases de datos SQL y herramientas de Business Intelligence (como Power BI o Tableau) para limpiar datos, predecir tendencias y crear visualizaciones impactantes.</p>
+        </section>
+
+        <section class="curso-seccion">
+            <h2>Lo que aprenderás</h2>
+            <p style="color: #666; margin-bottom: 30px;">Un recorrido claro por los bloques clave del curso, agrupados para que sepas qué vas a dominar desde el primer día.</p>
+            
+            <div class="cuadricula-4">
+                <article class="tarjeta-info">
+                    <div class="tarjeta-cabecera">
+                        <span class="icono">📊</span>
+                        <h4>Bases de datos</h4>
+                    </div>
+                    <p>Extracción y consulta de bases de datos (SQL) para manipular grandes volúmenes de información.</p>
+                </article>
+                
+                <article class="tarjeta-info">
+                    <div class="tarjeta-cabecera">
+                        <span class="icono">🐍</span>
+                        <h4>Python</h4>
+                    </div>
+                    <p>Análisis exploratorio y modelado usando Python y sus librerías más importantes de análisis de datos.</p>
+                </article>
+
+                <article class="tarjeta-info">
+                    <div class="tarjeta-cabecera">
+                        <span class="icono">📈</span>
+                        <h4>Power BI</h4>
+                    </div>
+                    <p>Visualización interactiva e informes dinámicos para presentar resultados de manera visual (Power BI / Tableau).</p>
+                </article>
+
+                <article class="tarjeta-info">
+                    <div class="tarjeta-cabecera">
+                        <span class="icono">🧠</span>
+                        <h4>Business Intelligence</h4>
+                    </div>
+                    <p>Toma de decisiones basadas en datos para aportar valor real y estratégico a la empresa.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="curso-proyecto curso-seccion principal">
+            <div>
+                <h3>Portafolio final</h3>
+                <p style="color: #666; margin-bottom: 20px;">Pon a prueba todo lo aprendido analizando un conjunto de datos real de una empresa.</p>
+                <h2 style="font-size: 42px; margin-bottom: 20px;">Pon a prueba lo aprendido</h2>
+                <p style="color: #666;">Durante este proyecto final, te encargarás de extraer y limpiar la información, descubrir patrones ocultos y crear un panel interactivo (dashboard) con métricas clave. Al terminar, tendrás un caso de estudio 100% real, documentado y listo para destacar en tu portafolio ante futuras empresas.</p>
+            </div>
+            <div class="principal-imagen">
+                <img src="./img/curso_data.png" alt="Análisis de datos">
+            </div>
+        </section>
+
+        <section class="curso-seccion">
+            <h2>Información Extra</h2>
+            <p style="color: #666; margin-bottom: 30px;">Todo lo que necesitas saber antes de empezar, presentado de forma clara y sin distracciones.</p>
+            <div class="cuadricula-5">
+                <article class="tarjeta-info"><div class="tarjeta-cabecera"><span class="icono">🎯</span><h4>Invierte en tu futuro</h4></div><p>Un programa pensado para adquieras habilidades analíticas.</p></article>
+                <article class="tarjeta-info"><div class="tarjeta-cabecera"><span class="icono">💳</span><h4>Precio: 214€</h4></div><p>Acceso completo al programa sin suscripciones ocultas.</p></article>
+                <article class="tarjeta-info"><div class="tarjeta-cabecera"><span class="icono">♾️</span><h4>Acceso de por vida</h4></div><p>Estudia a tu ritmo y accede a futuras actualizaciones.</p></article>
+                <article class="tarjeta-info"><div class="tarjeta-cabecera"><span class="icono">🎧</span><h4>Soporte prioritario</h4></div><p>Resuelve tus dudas directamente con los profesores.</p></article>
+                <article class="tarjeta-info"><div class="tarjeta-cabecera"><span class="icono">🎓</span><h4>Certificado oficial</h4></div><p>Obtén tu diploma de Davante Academy al aprobar.</p></article>
+            </div>
+        </section>
+
+        <section class="banner-cta">
+            <div><h2>¿Estás listo para empezar?</h2><p>Accede al curso completo, al portafolio final y a todo el soporte que necesitas.</p></div>
+           
+        </section>
+    </main>
+
+    <footer>
+        <!-- FOOTER IDÉNTICO -->
+        <div class="footer-superior">
+            <div class="footer-info"><strong>D</strong> <span>Davante Academy</span><p>Formación tecnológica con una experiencia visual moderna y coherente.</p></div>
+            <div class="footer-legal"><strong>Legal</strong><nav class="enlaces-legales"><a href="#">Términos y Condiciones</a><a href="#">Política de Privacidad</a></nav></div>
+        </div>
+        <div class="footer-inferior"><p>© 2026 Davante Academy. Todos los derechos reservados.</p></div>
+         <p xmlns:cc="http://creativecommons.org/ns#" >Esta obra de <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/Antonio250705">Antonio Javier García Corro</a> está bajo una <a href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Licencia Creative Commons Atribución-NoComercial 4.0 Internacional</a>.</p>
+    </footer>
+    <!-- MODAL DE BOOTSTRAP PARA EL CARRITO DINÁMICO -->
+    <div class="modal fade" id="modalCompra" tabindex="-1" aria-labelledby="modalCompraLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-dark text-white py-3">
+                    <h5 class="modal-title fw-bold d-flex align-items-center gap-2" id="modalCompraLabel">
+                        🛒 Carrito de Compras - Davante Academy
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div id="lista-carrito" class="d-flex flex-column gap-3 mb-4">
+                        <!-- Contenido dinámico -->
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                        <span class="fs-5 fw-bold text-dark">Total a pagar:</span>
+                        <span id="total-carrito" class="fs-4 fw-bold text-success">0€</span>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between bg-light py-3">
+                    <button type="button" class="btn btn-outline-secondary fw-semibold" data-bs-dismiss="modal">Seguir explorando</button>
+                    <button type="button" id="btn-tramitar" class="btn btn-dark px-4 fw-semibold" onclick="tramitarCompra()" disabled>Tramitar compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS DE BOOTSTRAP Y LÓGICA DEL CARRITO -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="carrito.js"></script>
+</body>
+</html>
